@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>europe</title>
+
+    <style>
+        * {
+            font-size: 15px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .m1 {
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        .m2 {
+            color: dark;
+        }
+
+        .m3 {
+            display: flex;
+            height: 30%;
+            margin: 15px;
+            margin-left: 15px;
+            justify-content: center;
+            align-items: center;
+            background-color: khaki;
+        }
+
+        .w {
+            color: black;
+        }
+
+        .m4 {
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .m5 {
+            margin-top: 20px;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .m6 {
+            display: flex;
+            margin: 15px;
+            margin-left: 15px;
+            justify-content: center;
+            align-items: center;
+            background-color: khaki;
+            height: 50%;
+            width: 80%;
+        }
+
+        .xyz {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .xy {
+            margin: 20px;
+            position: relative;
+        }
+
+        .xy:hover {
+            /* width:80%;
+            max-width:400px; */
+            box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .xy:hover .overlay {
+            opacity: 0.5;
+        }
+
+        .cf {
+            height: 100%;
+            width: 100%;
+            border: 0px solid white;
+
+        }
+
+        .fc {
+            border-radius: 50%;
+        }
+
+
+        .container1 {
+            position: relative;
+            width: 50%;
+            border-radius: 50%;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay1 {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: whitesmoke;
+            border-radius: 50%;
+        }
+
+        .container1:hover .overlay1 {
+            opacity: 0.7;
+            box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .text1 {
+            color: black;
+            opacity: 1.5;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 1;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+
+        .container {
+            position: relative;
+            width: 50%;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 100%;
+            right: 0;
+            background-color: whitesmoke;
+            overflow: hidden;
+            width: 0;
+            height: 100%;
+            transition: .5s ease;
+
+
+        }
+
+        .container:hover .overlay {
+            width: 100%;
+            left: 0;
+            opacity: 0.7;
+        }
+
+        .text {
+            white-space: nowrap;
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .m7 {
+            color: black;
+            text-decoration: none;
+        }
+
+        .m7:hover {
+            color: black;
+        }
+
+        .xyzw {
+
+            margin-left: 5%;
+            margin-right: 5%;
+            padding: 2%;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        .container33 {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container33 img {
+            vertical-align: middle;
+        }
+
+        .container33 .content33 {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            /* Fallback color */
+            background: rgba(0, 0, 0, 0.5);
+            /* Black background with 0.5 opacity */
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .over22 {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .over22-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .over22 a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .over22 a:hover,
+        .over22 a:focus {
+            color: #f1f1f1;
+        }
+
+        .over22 .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+
+
+        @media screen and (max-height: 450px) {
+            .over22 a {
+                font-size: 20px
+            }
+
+            .over22 .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .cont12 {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cont12 .card {
+                width: 400px;
+                /* flex-direction: column;
+                height: auto; */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cont12 .card {
+                max-width: 300px;
+                flex-direction: column;
+                height: auto;
+            }
+
+            .cont12 .card .imgbx {
+                position: relative;
+            }
+
+            .cont12 .card .imgbx,
+            .cont12 .card:hover .imgbx {
+                width: 100%;
+                height: 200px;
+                left: 0;
+            }
+
+            .cont12 .card .imgbx img,
+            .cont12 .card:hover .imgbx img {
+                max-width: 100px;
+            }
+
+            .cont12 .card .content {
+                position: relative;
+                width: 100%;
+            }
+        }
+
+
+
+        @media only screen and (max-width: 800px) {
+            .m3 {
+                height: 40%;
+                display: inherit;
+                margin-left: 15%;
+                margin-right: 15%;
+                background-color: khaki;
+            }
+
+            .xyz {
+                display: inherit;
+                margin-left: 25%;
+                margin-right: 25%;
+            }
+        }
+
+        @media only screen and (max-width: 1300px) {
+            .m3 {
+                height: 50%;
+                display: inherit;
+                margin-left: 5%;
+                margin-right: 5%;
+                background-color: khaki;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top ">
+        <a class="navbar-brand" href="#">
+            <img src="image/dt.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            Darshan's Travel
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item text-dark">
+                    <a class="nav-link" href="mainpage.html">Home</a>
+                </li>
+                <li class="nav-item text-dark">
+                    <a class="nav-link" href="#"><span style="cursor:pointer" onclick="openNav()">Country</span></a>
+                </li>
+                <li class="nav-item text-dark">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+         
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <!-- <div class="mx-2">
+            <button class="btn btn-danger" data-toggle="modal" data-target="#loginModal">Login</button>
+            <button class="btn btn-danger" data-toggle="modal" data-target="#signupModal">SignUp</button>
+        </div> -->
+        </div>
+    </nav>
+
+    <div id="myNav" class="over22">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="over22-content">
+            <a href="france.html">France</a>
+            <a href="iceland.html">Iceland</a>
+            <a href="italy.html">Italy</a>
+            <a href="portugal.html">Portugal</a>
+            <a href="spain.html">Spain</a>
+        </div>
+    </div>
+
+    <div class="container33">
+        <img src="image/europe.png" alt="Asia" style="width:100%;height: 700px;">
+        <div class="content33">
+            <h1>Europe</h1>
+
+        </div>
+    </div>
+
+
+    <div class="xyzw">
+        Europe is a continent located entirely in the Northern Hemisphere and mostly in the Eastern Hemisphere. It
+        comprises the westernmost part of Eurasia and is bordered by the Arctic Ocean to the north, the Atlantic Ocean
+        to the west, the Mediterranean Sea to the south, and Asia to the east. Europe is commonly considered to be
+        separated from Asia by the watershed of the Ural Mountains, the Ural River, the Caspian Sea, the Greater
+        Caucasus, the Black Sea, and the waterways of the Turkish Straits. Although much of this border is over land,
+        Europe is generally accorded the status of a full continent because of its great physical size and the weight of
+        history and tradition.
+    </div>
+
+
+    <hr class="featurette-divider">
+
+
+
+    </div>
+    </div>
+
+    </div>
+    </section> -->
+
+
+    <!-- Menu_row_2 -->
+    <div class="m5">
+        <center>
+            <h1 class="m4">Country portfolio</h1>
+        </center>
+    </div>
+
+    <div class="xyz">
+
+        <div class="my-4 xy container" style="width: 22rem;">
+            <img src="image/france.jpg" class="card-img-top cf" alt="...">
+            <div class="overlay">
+                <div class="text">
+                    <a href="france.html" class="m7">
+                        <h1>France</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="my-4 xy container" style="width: 22rem;">
+            <img src="image/iceland.jpg" class="card-img-top cf" alt="...">
+            <div class="overlay">
+                <div class="text">
+                    <a href="iceland.html" class="m7">
+                        <h1>Iceland</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-4 xy container" style="width: 22rem;">
+            <img src="image/italy.jpg" class="card-img-top cf" alt="...">
+            <div class="overlay">
+                <div class="text">
+                    <a href="italy.html" class="m7">
+                        <h1>Italy</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="xyz">
+        <div class="my-4 xy container" style="width: 22rem;">
+            <img src="image/portugal.jfif" class="card-img-top cf" alt="...">
+            <div class="overlay">
+                <div class="text">
+                    <a href="portugal.html" class="m7">
+                        <h1>Portugal</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-4 xy container" style="width: 22rem;">
+            <img src="image/spain.jpg" class="card-img-top cf" alt="...">
+            <div class="overlay">
+                <div class="text">
+                    <a href="spain.html" class="m7">
+                        <h1>Spain</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="position-relative z-index-10 d-print-none text-light bg-dark">
+        <div class="py-6 bg-gray-200 text-muted">
+            <div class="container">
+                <div class="row">
+                    <div class="mb-5 mb-lg-0 col-lg-4">
+                        <div class="font-weight-bold text-uppercase text-dark mb-3">Directory</div>
+                        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="#" target="_blank" title="twitter"
+                                    class="text-muted text-hover-primary"><i class="fab fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#" target="_blank" title="facebook"
+                                    class="text-muted text-hover-primary"><i class="fab fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#" target="_blank" title="instagram"
+                                    class="text-muted text-hover-primary"><i class="fab fa-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"
+                                    class="text-muted text-hover-primary"><i class="fab fa-pinterest"></i></a></li>
+                            <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"
+                                    class="text-muted text-hover-primary"><i class="fab fa-vimeo"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-5 mb-lg-0 col-md-6 col-lg-2">
+                        <div class="font-weight-bold text-uppercase text-dark mb-3">Rentals</div>
+                        <ul class="list-unstyled">
+                            <li><a class="text-muted" href="/">Rooms</a></li>
+                            <li><a class="text-muted" href="/category-rooms">Map on top</a></li>
+                            <li><a class="text-muted" href="/category-2-rooms">Side map</a></li>
+                            <li><a class="text-muted" href="/category-3-rooms">No map</a></li>
+                            <li><a class="text-muted" href="/detail-rooms">Room detail</a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-5 mb-lg-0 col-md-6 col-lg-2">
+                        <div class="font-weight-bold text-uppercase text-dark mb-3">Pages</div>
+                        <ul class="list-unstyled">
+                            <li><a class="text-muted" href="/compare">Comparison<span
+                                        class="ml-1 badge badge-info-light">New</span></a></li>
+                            <li><a class="text-muted" href="/team">Team<span
+                                        class="ml-1 badge badge-info-light">New</span></a></li>
+                            <li><a class="text-muted" href="/contact">Contact</a></li>
+                            <li><a class="text-muted" href="/pricing">Pricing</a></li>
+                            <li><a class="text-muted" href="/detail-rooms">Room detail</a></li>
+                            <li><a class="text-muted" href="/text">Text page</a></li>
+                            <li><a class="text-muted" href="/faq">F.A.Q.s</a></li>
+                            <li><a class="text-muted" href="/coming-soon">Coming soon</a></li>
+                            <li><a class="text-muted" href="/404">404 page<span
+                                        class="ml-1 badge badge-info-light">New</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-5 mb-lg-0 col-lg-4">
+                        <div class="font-weight-bold text-uppercase text-dark mb-3">Daily Offers &amp; Discounts</div>
+                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.
+                        </p>
+                        <form id="newsletter-form" class="">
+                            <div class="input-group mb-3"><input type="email" placeholder="Your Email Address"
+                                    aria-label="Your Email Address"
+                                    class="bg-transparent border-dark border-right-0 form-control text-light bg-dark">
+                                <div class="input-group-append"><button
+                                        class="btn-outline-dark border-left-0 btn btn-deoco"><i
+                                            class="fa fa-paper-plane text-lg"></i></button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-4 font-weight-light bg-gray-800 text-gray-300">
+            <div class="container">
+                <div class="align-items-center row">
+                    <div class="text-center text-md-left col-md-6">
+                        <p class="text-sm mb-md-0">© 2020, Your company. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

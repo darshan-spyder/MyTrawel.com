@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Water Activity</title>
+
+    <style>
+        * {
+            font-size: 15px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .m1 {
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        .m2 {
+            color: dark;
+        }
+
+        .m3 {
+            display: flex;
+            height: 30%;
+            margin: 15px;
+            margin-left: 15px;
+            justify-content: center;
+            align-items: center;
+            background-color: khaki;
+        }
+
+        .w {
+            color: black;
+        }
+
+        .m4 {
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .m5 {
+            margin-top: 20px;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .m6 {
+            display: flex;
+            margin: 15px;
+            margin-left: 15px;
+            justify-content: center;
+            align-items: center;
+            background-color: khaki;
+            height: 50%;
+            width: 80%;
+        }
+
+        .xyz {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+
+        }
+
+        .xy {
+            margin: 20px;
+            position: relative;
+        }
+
+        .xy:hover {
+            /* width:80%;
+            max-width:400px; */
+            box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 10px 10px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .xy:hover .overlay {
+            opacity: 0.5;
+        }
+
+        .cf {
+            height: 100%;
+            width: 100%;
+            border: 0px solid white;
+
+        }
+
+        .fc {
+            border-radius: 50%;
+        }
+
+
+        .container1 {
+            position: relative;
+            width: 50%;
+            border-radius: 50%;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay1 {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: whitesmoke;
+            border-radius: 50%;
+
+        }
+
+        .container1:hover .overlay1 {
+            opacity: 0.7;
+            box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .text1 {
+            color: black;
+            opacity: 1.5;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 1;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+
+        .container {
+            position: relative;
+            width: 50%;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 100%;
+            right: 0;
+            background-color: whitesmoke;
+            overflow: hidden;
+            width: 0;
+            height: 100%;
+            transition: .5s ease;
+
+
+        }
+
+        .container:hover .overlay {
+            width: 100%;
+            left: 0;
+            opacity: 0.7;
+        }
+
+        .text {
+            white-space: nowrap;
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .m7 {
+            color: black;
+            text-decoration: none;
+        }
+
+        .m7:hover {
+            color: black;
+        }
+
+        .xyzw {
+
+            margin-left: 5%;
+            margin-right: 5%;
+            padding: 2%;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        .container33 {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container33 img {
+            vertical-align: middle;
+        }
+
+        .container33 .content33 {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            /* Fallback color */
+            background: rgba(0, 0, 0, 0.5);
+            /* Black background with 0.5 opacity */
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .over22 {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .over22-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .over22 a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .over22 a:hover,
+        .over22 a:focus {
+            color: #f1f1f1;
+        }
+
+        .over22 .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        .n1 {
+            margin-top: 50px;
+        }
+
+        .n2 {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .rr {
+            margin-top: 0%;
+            padding: 5%;
+        }
+
+        .rf {
+            padding: 2%;
+
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+
+
+        @media screen and (max-height: 450px) {
+            .over22 a {
+                font-size: 20px
+            }
+
+            .over22 .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .cont12 {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cont12 .card {
+                width: 400px;
+                /* flex-direction: column;
+                height: auto; */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cont12 .card {
+                max-width: 300px;
+                flex-direction: column;
+                height: auto;
+            }
+
+            .cont12 .card .imgbx {
+                position: relative;
+            }
+
+            .cont12 .card .imgbx,
+            .cont12 .card:hover .imgbx {
+                width: 100%;
+                height: 200px;
+                left: 0;
+            }
+
+            .cont12 .card .imgbx img,
+            .cont12 .card:hover .imgbx img {
+                max-width: 100px;
+            }
+
+            .cont12 .card .content {
+                position: relative;
+                width: 100%;
+            }
+        }
+
+
+
+        @media only screen and (max-width: 800px) {
+            .m3 {
+                height: 40%;
+                display: inherit;
+                margin-left: 15%;
+                margin-right: 15%;
+                background-color: khaki;
+            }
+
+            .xyz {
+                display: inherit;
+                margin-left: 25%;
+                margin-right: 25%;
+            }
+        }
+
+        @media only screen and (max-width: 1300px) {
+            .m3 {
+                height: 50%;
+                display: inherit;
+                margin-left: 5%;
+                margin-right: 5%;
+                background-color: khaki;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top ">
+        <a class="navbar-brand" href="#">
+            <img src="image/dt.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            Darshan's Travel
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item text-dark">
+                    <a class="nav-link" href="mainpage.html">Home</a>
+                </li>
+                <li class="nav-item text-dark">
+                    <a class="nav-link" href="#"><span style="cursor:pointer" onclick="openNav()">Country</span></a>
+                </li>
+                <li class="nav-item text-dark">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+               
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <!-- <div class="mx-2">
+            <button class="btn btn-danger" data-toggle="modal" data-target="#loginModal">Login</button>
+            <button class="btn btn-danger" data-toggle="modal" data-target="#signupModal">SignUp</button>
+        </div> -->
+        </div>
+    </nav>
+
+    <div id="myNav" class="over22">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="over22-content">
+            <a href="mauritius.html">Mauritius</a>
+            <a href="india.html">India</a>
+            <a href="portugal.html">Portugal</a>
+        </div>
+    </div>
+
+    <div class="container33">
+        <img src="image/water.jpg" alt="hiking" style="width:100%;height:100%;" class="n1">
+        <div class="content33">
+            <h1>Water Activity</h1>
+
+        </div>
+    </div>
+
+
+    <div class="xyzw">
+        Summer is approaching and many of our readers are planning their sunny holidays. If you love water sports as
+        much as traveling, consider these ten beautiful spots and fun water sports. Check out the list and pick your
+        favorite!
+    </div>
+
+
+    <hr class="featurette-divider">
+
+
+
+    </div>
+    </div>
+
+    </div>
+    </section>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="xyz">
+                <div class="my-4 xy container1">
+                    <center><img class="bd-placeholder-img rounded-circle" width="140" height="140" src="image/mauritius.jpg"
+                            role="img"></center>
+                    <div class="overlay1">
+                        <div class="text1">
+                            <a href="mauritius.html" class="m7">
+                                <h1>Mauritius</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Mauritius</h2>
+            <p class="n2">
+                Your vacation wouldn't be complete if you visit Mauritius and don't even experience the wide range of
+                water sports and activities this paradise island has in store for you. The endless array of turquoise
+                blue waters surrounding the island isn't just peace to the eyes but also full of exciting possibilities
+                for you to take part in.
+            </p>
+
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+            <div class="xyz">
+                <div class="my-4 xy container1">
+                    <center><img class="bd-placeholder-img rounded-circle" width="140" height="140" src="image/india.jfif"
+                            role="img"></center>
+                    <div class="overlay1">
+                        <div class="text1">
+                            <a href="india.html" class="m7">
+                                <h1>India</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>India</h2>
+            <p class="n2">While most adventure lovers associate aquatic sports with the wild waters of Australia or the
+                pristine lagoons of Mauritius, the truth is, there are plenty of options in India, and I am not talking
+                about Goa. For those looking to enjoy some form of aquatic sport, India has plenty of options and caters
+                to all, from the novice to the adrenaline junkies, with options ranging from simple kayaking, boat
+                cruising to white water rafting, windsurfing and more.</p>
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4">
+            <div class="xyz">
+                <div class="my-4 xy container1">
+                    <center><img class="bd-placeholder-img rounded-circle" width="140" height="140" src="image/portugal.jfif"
+                            role="img"></center>
+                    <div class="overlay1">
+                        <div class="text1">
+                            <a href="portugal.html" class="m7">
+                                <h1>Portugal</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Portugal</h2>
+            <p class="n2">Portugal’s over 900 km of coastline (just in the continent) attracts water sports’ enthusiasts
+                from all over the world. With its sandy beaches, stunning sunsets and perfect waves, it’s easy to get
+                lost with the variety of water sports and activities offered in every city touching the ocean.</p>
+        </div><!-- /.col-lg-4 -->
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- row_2 -->
+    <center><img src="image/water_logo.jpg"></center>
+    <center>
+        <h1>Water Activity</h1>
+    </center>
+    <div class="row featurette">
+        <div class="col-md-7 rr">
+            <h1 class="featurette-heading">Port Louis<span class="text-muted">(Mauritius)</span>
+            </h1>
+            <p class="lead">
+                The stunning island nation of Mauritius boasts of colorful lagoon, pristine beaches, and stunning reefs.
+                Head to the gorgeous Port Louis for indulging different kinds of water sports. The cliffs and rocks do
+                not become a hindrance for adventure lovers, instead enhance the thrill.
+            </p>
+        </div>
+        <div class="col-md-5 rf">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                height="500" src="image/water1.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+            </img>
+        </div>
+    </div>
+
+    <div class="row featurette">
+        <div class="col-md-7 order-md-2 rr">
+            <h1 class="featurette-heading">Rishikesh<span class="text-muted">(India)</span>
+            </h1>
+            <p class="lead">
+                Rishikesh is among the most popular river rafting destinations in world. Rafting in Rishikesh is ideal
+                for first timers as well as experienced rafters, there are difficulty levels ranging from Basic to
+                Advanced. Some popular beginning points are Brahmapuri, Shivpuri, Marine Drive and Kaudiyala. Rafting
+                duration are between 2 hours to 6 hours. Cross Fire, Three Blind Mice, Hilton, Black Money and
+                Terminator are some popular rapids here.
+            </p>
+        </div>
+        <div class="col-md-5 order-md-1 rf">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                height="500" src="image/water3.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+
+            </img>
+        </div>
+    </div>
+
+    <div class="row featurette">
+        <div class="col-md-7 rr">
+            <h1 class="featurette-heading">Lagos & Sagres<span class="text-muted">(Portugal)</span></h1>
+            <p class="lead">
+                It seldom happens that if we talk about Portugal, beaches come in our minds. This place is known for its
+                structural wonders, religious site, natural scenery, tasty food, art, culture and other outdoor
+                activities. However, the hidden beach destinations of Lagos and Sagres, let you enjoy all sorts of
+                water-related activities.
+            </p>
+        </div>
+        <div class="col-md-5 rf">
+            <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                height="500" src="image/water2.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img">
+
+            </img>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- Footer -->
+    <footer class="position-relative z-index-10 d-print-none text-light bg-dark">
+        <div class="py-6 bg-gray-200 text-muted">
+            <div class="container">
+                <div class="row">
+                    <div class="mb-5 mb-lg-0 col-lg-4">
+                        <div class="font-weight-bold text-uppercase text-dark mb-3">Directory</div>
+                        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="#" target="_blank" title="twitter"
+                                    class="text-muted text-hover-primary"><i class="fab fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#" target="_blank" title="facebook"
+                                    class="text-muted text-hover-primary"><i class="fab fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#" target="_blank" title="instagram"
+                                    class="text-muted text-hover-primary"><i class="fab fa-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"
+                                    class="text-muted text-hover-primary"><i class="fab fa-pinterest"></i></a></li>
+                            <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"
+                                    class="text-muted text-hover-primary"><i class="fab fa-vimeo"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-5 mb-lg-0 col-md-6 col-lg-2">
+                        <div class="font-weight-bold text-uppercase text-dark mb-3">Rentals</div>
+                        <ul class="list-unstyled">
+                            <li><a class="text-muted" href="/">Rooms</a></li>
+                            <li><a class="text-muted" href="/category-rooms">Map on top</a></li>
+                            <li><a class="text-muted" href="/category-2-rooms">Side map</a></li>
+                            <li><a class="text-muted" href="/category-3-rooms">No map</a></li>
+                            <li><a class="text-muted" href="/detail-rooms">Room detail</a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-5 mb-lg-0 col-md-6 col-lg-2">
+                        <div class="font-weight-bold text-uppercase text-dark mb-3">Pages</div>
+                        <ul class="list-unstyled">
+                            <li><a class="text-muted" href="/compare">Comparison<span
+                                        class="ml-1 badge badge-info-light">New</span></a></li>
+                            <li><a class="text-muted" href="/team">Team<span
+                                        class="ml-1 badge badge-info-light">New</span></a></li>
+                            <li><a class="text-muted" href="/contact">Contact</a></li>
+                            <li><a class="text-muted" href="/pricing">Pricing</a></li>
+                            <li><a class="text-muted" href="/detail-rooms">Room detail</a></li>
+                            <li><a class="text-muted" href="/text">Text page</a></li>
+                            <li><a class="text-muted" href="/faq">F.A.Q.s</a></li>
+                            <li><a class="text-muted" href="/coming-soon">Coming soon</a></li>
+                            <li><a class="text-muted" href="/404">404 page<span
+                                        class="ml-1 badge badge-info-light">New</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="mb-5 mb-lg-0 col-lg-4">
+                        <div class="font-weight-bold text-uppercase text-dark mb-3">Daily Offers &amp; Discounts</div>
+                        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.
+                        </p>
+                        <form id="newsletter-form" class="">
+                            <div class="input-group mb-3"><input type="email" placeholder="Your Email Address"
+                                    aria-label="Your Email Address"
+                                    class="bg-transparent border-dark border-right-0 form-control text-light bg-dark">
+                                <div class="input-group-append"><button
+                                        class="btn-outline-dark border-left-0 btn btn-deoco"><i
+                                            class="fa fa-paper-plane text-lg"></i></button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="py-4 font-weight-light bg-gray-800 text-gray-300">
+            <div class="container">
+                <div class="align-items-center row">
+                    <div class="text-center text-md-left col-md-6">
+                        <p class="text-sm mb-md-0">© 2020, Your company. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

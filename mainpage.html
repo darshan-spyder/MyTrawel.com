@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>main page</title>
+
+    <style>
+
+
+
+        
+        * {
+            font-size: 15px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .m1 {
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        .m2 {
+            color: dark;
+        }
+
+        /* .m3 {
+            display: flex;
+            height: 30%;
+            margin: 15px;
+            margin-left: 15px;
+            justify-content: center;
+            align-items: center;
+            background-color: khaki;
+        } */
+
+        .w {
+            color: black;
+        }
+
+        .m4 {
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .m5 {
+            margin-top: 20px;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* .m6 {
+            display: flex;
+            margin: 15px;
+            margin-left: 15px;
+            justify-content: center;
+            align-items: center;
+            background-color: khaki;
+            height: 50%;
+            width: 80%;
+        } */
+
+        .xyz {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .xy {
+            margin: 20px;
+            position: relative;
+        }
+
+        .xy:hover {
+            /* width:80%;
+            max-width:400px; */
+            box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .xy:hover .overlay {
+            opacity: 0.5;
+        }
+
+        .cf {
+            height: 100%;
+            width: 100%;
+            border: 0px solid white;
+
+        }
+
+        .fc {
+            border-radius: 50%;
+        }
+
+
+        .container1 {
+            position: relative;
+            width: 50%;
+            border-radius: 50%;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay1 {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: whitesmoke;
+            border-radius: 50%;
+        }
+
+        .container1:hover .overlay1 {
+            opacity: 0.7;
+            box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 10px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .text1 {
+            color: black;
+            opacity: 1.5;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            opacity: 1;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+
+        .container {
+            position: relative;
+            width: 50%;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 100%;
+            right: 0;
+            background-color: whitesmoke;
+            overflow: hidden;
+            width: 0;
+            height: 100%;
+            transition: .5s ease;
+
+
+        }
+
+        .container:hover .overlay {
+            width: 100%;
+            left: 0;
+            opacity: 0.7;
+        }
+
+        .text {
+            white-space: nowrap;
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            overflow: hidden;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+        }
+
+        .m7 {
+            color: black;
+            text-decoration: none;
+        }
+
+        .m7:hover {
+            color: black;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .m3 {
+                height: 40%;
+                display: inherit;
+                margin-left: 15%;
+                margin-right: 15%;
+                background-color: khaki;
+            }
+
+            .xyz {
+                align-items: center;
+                justify-content: center;
+                display: inherit;
+                margin-left: 25%;
+                margin-right: 25%;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .m3 {
+                height: 50%;
+                display: inherit;
+                margin-left: 5%;
+                margin-right: 5%;
+                background-color: khaki;
+            }
+
+            .xyz {
+                align-items: center;
+                justify-content: center;
+                display: inherit;
+                margin-left: 40%;
+                margin-right: 20%;
+
+            }
+        }
+
+        @media only screen and (max-width: 1300px) {
+            .m3 {
+                height: 50%;
+                display: inherit;
+                margin-left: 5%;
+                margin-right: 5%;
+                background-color: khaki;
+            }
+
+            .xyz {
+                align-items: center;
+                justify-content: center;
+                display: inherit;
+                margin-left: 5%;
+                margin-right: 5%;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top ">
+        <a class="navbar-brand" href="#">
+            <img src="image/dt.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            Darshan's Travel
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        7 continents
+                    </a>
+                    <div class="dropdown-menu m1" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item m1" href="asia.html">Asia</a>
+                        <a class="dropdown-item m1" href="europe.html">Europe</a>
+                        <a class="dropdown-item m1" href="australia.html">Australiya</a>
+                        <a class="dropdown-item m1" href="n_america.html">North America</a>
+                        <a class="dropdown-item m1" href="s_america.html">South America</a>
+                        <a class="dropdown-item m1" href="africa.html">Africa</a>
+                        <a class="dropdown-item m1" href="antarctica.html">Antarctica</a>
+                    </div>
+                </li>
+                <li class="nav-item text-dark">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <div class="mx-2">
+                <button class="btn btn-danger" data-toggle="modal" data-target="#loginModal">Login</button>
+                <button class="btn btn-danger" data-toggle="modal" data-target="#signupModal">SignUp</button>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to icoder</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="SignupModalLabel">Get in a icoder account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="cexampleInputPassword1">Confirm Password</label>
+                            <input type="password" class="form-control" id="cexampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Signup</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- image -->
+
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/5.jpg" class="d-block w-100" alt="..." height="50%" width="80%">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Visit best towns place in the word</h2>
+                    <p> We show you the most beautiful cities countrywide with stunning urban landscapes, and a thriving
+                        cultural scene which you should visit</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="image/11.jpeg" class="d-block w-100" alt="..." height="50%" width="80%">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Visit best adventure place in the word</h2>
+                    <p>It is the immense variation in topography and terrain that has given shape to the relatively new
+                        and fresh outlook on trave</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="image/22.jfif" class="d-block w-100" alt="..." height="50%" width="80%">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="w">Visit best historical place in the word</h2>
+                    <p class="w">Unravelling these marvels will offer you a peek into the rich history</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="image/3.jpg" class="d-block w-100" alt="..." height="50%" width="80%">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="w">Visit best beaches place in the word</h2>
+                    <p class="w">India is fortunate to have a dream coastline that has some of the best beaches in the
+                        world</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="image/4.jpg" class="d-block w-100" alt="..." height="50%" width="80%">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Visit best hiking place in the word</h2>
+                    <p>Hiking destinations in India is broad and vast</p>
+                </div>
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="m5">
+        <center>
+            <h1 class="m4">Best offers</h1>
+        </center>
+    </div>
+
+
+    <!-- offers -->
+    <div class="xyz">
+        <div class="card my-4 xy" style="width: 18rem;">
+            <img src="image/o.png" class="card-img-top cf" alt="...">
+        </div>
+
+        <div class="card my-4 xy" style="width: 18rem;">
+            <img src="image/f1.png" class="card-img-top cf" alt="...">
+        </div>
+
+        <div class="card my-4 xy" style="width: 18rem;">
+            <img src="image/f2.png" class="card-img-top cf" alt="...">
+        </div>
+
+        <div class="card my-4 xy" style="width: 18rem;">
+            <img src="image/e.png" class="card-img-top cf" alt="...">
+        </div>
+
+        <div class="card my-4 xy" style="width: 18rem;">
+            <img src="image/r.png" class="card-img-top cf" alt="...">
+        </div>
+    </div>
+
+
+    <br>
+    <hr class="featurette-divider">
+
+    <!-- Menu_row_1 -->
+    <div class="m5">
+        <center><img src="image/map1.jfif" class="" alt="..." width="200px" height="150px"></center>
+        <center>
+            <h1 class="m4">Start planning your adventure</h1>
+        </center>
+    </div>
+
+    <div class="xyz">
+
+        <div class="my-4 xy container1" style="width: 18rem;">
+            <img src="image/leisure.jpg" class="card-img-top cf fc" alt="...">
+            <div class="overlay1">
+                <div class="text1">
+                    <a href="leisure.html" class="m7">
+                        <h1>Leisure</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="my-4 xy container1" style="width: 18rem;">
+            <img src="image/towns.jpg" class="card-img-top cf fc" alt="...">
+            <div class="overlay1">
+                <div class="text1">
+                    <a href="towns.html" class="m7">
+                        <h1>Towns</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-4 xy container1" style="width: 18rem;">
+            <img src="image/beaches.jpg" class="card-img-top cf fc" alt="...">
+            <div class="overlay1">
+                <div class="text1">
+                    <a href="beaches.html" class="m7">
+                        <h1>Beaches</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-4 xy container1" style="width: 18rem;">
+            <img src="image/water.jpg" class="card-img-top cf fc" alt="...">
+            <div class="overlay1">
+                <div class="text1">
+                    <a href="water.html" class="m7">
+                        <h1>Water Activites</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="xyz">
+        <div class="my-4 xy container1" style="width: 18rem;">
+            <img src="image/redwoods.jpg" class="card-img-top cf fc" alt="...">
+            <div class="overlay1">
+                <div class="text1">
+                    <a href="redwoods.html" class="m7">
+                        <h1>Redwoods</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-4 xy container1" style="width: 18rem;">
+            <img src="image/history.jpg" class="card-img-top cf fc" alt="...">
+            <div class="overlay1">
+                <div class="text1">
+                    <a href="history.html" class="m7">
+                        <h1>History</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-4 xy container1" style="width: 18rem;">
+            <img src="image/hiking.jpg" class="card-img-top cf fc" alt="...">
+            <div class="overlay1">
+                <div class="text1">
+                    <a href="hiking.html" class="m7">
+                        <h1>Hiking</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-4 xy container1" style="width: 18rem;">
+            <img src="image/tours.jfif" class="card-img-top cf fc" alt="...">
+            <div class="overlay1">
+                <div class="text1">
+                    <a href="tours.html" class="m7">
+                        <h1>Tours & Guides</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- Menu_row_2 -->
+    <div class="m5">
+        <center><img src="image/7_con.png" class="" alt="..." width="250px" height="150px"></center>
+
+        <center>
+            <h1 class="m4">You know about 7 continents</h1>
+        </center>
+    </div>
+
+    <div class="xyz">
+
+        <div class="my-4 xy container" style="width: 18rem;">
+            <img src="image/asia.png" class="card-img-top cf" alt="...">
+            <div class="overlay">
+                <div class="text">
+                    <a href="asia.html" class="m7">
+                        <h1>Asia</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="my-4 xy container" style="width: 18rem;">
+            <img src="image/europe.png" class="card-img-top cf" alt="...">
+            <div class="overlay">
+                <div class="text">
+                    <a href="europe.html" class="m7">
+                        <h1>Europe</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-4 xy container" style="width: 18rem;">
+            <img src="image/australiya.png" class="card-img-top cf" alt="...">
+            <div class="overlay">
+                <div class="text">
+                    <a href="australia.html" class="m7">
+                        <h1>Australia</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-4 xy container" style="width: 18rem;">
+            <img src="image/n_america.png" class="card-img-top cf" alt="...">
+            <div class="overlay">
+                <div class="text">
+                    <a href="n_america.html" class="m7">
+                        <h1>North America</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="xyz">
+        <div class="my-4 xy container" style="width: 18rem;">
+            <img src="image/s_america.png" class="card-img-top cf" alt="...">
+            <div class="overlay">
+                <div class="text">
+                    <a href="s_america.html" class="m7">
+                        <h1>South America</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="my-4 xy container" style="width: 18rem;">
+            <img src="image/africa.png" class="card-img-top cf" alt="...">
+            <div class="overlay">
+                <div class="text">
+                    <a href="africa.html" class="m7">
+                        <h1>Africa</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class=" my-4 xy container" style="width: 18rem;">
+            <img src="image/antarctica.jpg" class="card-img-top cf" alt="...">
+            <div class="overlay">
+                <div class="text">
+                    <a href="antarctica.html" class="m7">
+                        <h1>Antarctica</h1>
+                    </a>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        var modal2 = document.getElementById('id02');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- <div class="col-md-6 mb-4">
+        <h2 class="my-5 h2">With shadow</h2>
+        <img class="rounded-circle z-depth-2" alt="100x100" src="image/4.jpg" data-holder-rendered="true" width="200px" height="200px">
+      </div> -->
+
+    <!-- <div class="text-center m6 my-4">
+        <center><img src="image/map1.jfif" class="rounded float-left m3"></center>
+        
+    </div>
+    <center><h1>Start planning your adventure</h1></center>
+    -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
